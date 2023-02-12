@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:sport_sharing_app/utils/constants.dart';
+import 'package:sport_sharing_app/widgets/event_widget.dart';
 import 'package:sport_sharing_app/widgets/home_page/ball_circle.dart';
 import 'package:sport_sharing_app/widgets/home_page/follow_btn.dart';
 import 'package:sport_sharing_app/widgets/home_page/follow_info.dart';
@@ -87,7 +88,8 @@ class HomePage extends StatelessWidget {
                         ),
                         const Text(
                           'Travel, Advantures & \n Lifestyle Photographer & Digital Influencer\n Nike Ambassador \nLets Work:',
-                          style: TextStyle(color: Constants.spGrayColor),
+                          style: TextStyle(
+                              color: Constants.spGrayColor, height: 1.4),
                         ),
 
                         const SizedBox(
@@ -147,26 +149,8 @@ class HomePage extends StatelessWidget {
             padding:
                 const EdgeInsets.symmetric(horizontal: Constants.spPadding),
             child: Column(
-              children: [
-                Container(
-                  padding:
-                      const EdgeInsets.symmetric(vertical: 10, horizontal: 10),
-                  decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(10),
-                      color: Theme.of(context).colorScheme.secondary),
-                  child: Row(
-                    children: [
-                      CircleAvatar(
-                        backgroundColor: Theme.of(context).primaryColor,
-                        child: const ClipOval(
-                            child: Icon(
-                          Icons.earbuds_sharp,
-                          color: Constants.spBlackColor,
-                        )),
-                      )
-                    ],
-                  ),
-                )
+              children: const [
+                EventWidget()
               ],
             ),
           )
