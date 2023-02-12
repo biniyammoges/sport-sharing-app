@@ -5,6 +5,7 @@ import 'package:sport_sharing_app/widgets/home_page/ball_circle.dart';
 import 'package:sport_sharing_app/widgets/home_page/follow_btn.dart';
 import 'package:sport_sharing_app/widgets/home_page/follow_info.dart';
 import 'package:sport_sharing_app/widgets/home_page/header_user_info.dart';
+import 'package:sport_sharing_app/widgets/player_recommendation.dart';
 import 'package:sport_sharing_app/widgets/sp_outlined_button.dart';
 
 class HomePage extends StatelessWidget {
@@ -150,10 +151,14 @@ class HomePage extends StatelessWidget {
                 const EdgeInsets.symmetric(horizontal: Constants.spPadding),
             child: Column(
               children: const [
-                EventWidget()
+                EventWidget(),
+                SizedBox(
+                  height: 25,
+                ),
+                PlayerRecommendation()
               ],
             ),
-          )
+          ),
         ],
       ),
     );
